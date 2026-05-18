@@ -161,6 +161,45 @@ Tabel ini berisikan data setiap user dan perilakunya. Tabel ini memiliki 9 kolom
 
 ### sql-metabase.sql
 Source Code: [sql-metabase.sql](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/sql-metabase.sql) <br>
+Data yang telah tersimpan di ClickHouse kemudian divisualisasikan melalui Metabase dengan Dashboard berdasarkan query-query dibawah ini. Hal ini dirancang untuk mengubah data transaksional menjadi metrik yang terukur, membantu proses pengambilan keputusan melalui pendekatan berbasis data.
+
+#### A. Analisis Perilaku & Loyalitas Pelanggan
+
+- **Customer Segmentation:** Pengelompokan dilakukan dengan mengevaluasi final_score, reorder_rate, dan durasi pesanan terakhir. Kategori yang terbentuk meliputi:
+
+    - **The Champions:** Pelanggan dengan skor > 80 (paling loyal).
+
+    - **The Potential:** Pelanggan dengan skor cukup tinggi yang memiliki potensi besar untuk menjadi pelanggan paling loyal.
+
+    - **Regular:** Pelanggan dengan skor biasa-biasa saja. 
+    
+    - **At Risk Customer:** Pelanggan dengan skor menengah yang memerlukan perhatian agar tidak berpindah.
+
+    - **New Customer:** Pelanggan baru
+
+    - **Lost Customer:** Pelanggan dengan performa skor terendah (sudah tidak pernah kembali lagi).
+
+- **Top 10 Loyal Customer:** Tabel ini mengagregasikan skor loyalitas setiap pengguna. Fungsi utamanya adalah mengidentifikasi individu dengan final score tertinggi.
+
+#### B. Analisis Produk & Kebutuhan Stok
+
+- **Most Reordered Products:** Menampilkan produk yang memiliki tingkat pemesanan ulang (reorder count) tertinggi.
+
+- **Top Department:** Agregasi jumlah pesanan berdasarkan departemen. 
+
+- **Stocking Type:** Mengklasifikasikan perilaku belanja pelanggan berdasarkan basket size dan reorder rate:
+
+    - **Stockpiler:** Pelanggan yang membeli dalam jumlah besar sekaligus namun jarang memesan ulang 
+
+    - **Frequent Reorderer:** Pelanggan yang membeli dalam jumlah sedikit namun sangat sering memesan kembali.
+
+    - **Balanced:** Pelanggan dengan pola belanja menengah yang stabil.
+
+#### C. Analisis Tambahan
+
+- **KPI Scorecards:** Menyajikan angka kumulatif yang bersifat esensial, seperti **Total Orders**, **Total Products Type**, hingga **Average User per Product**. 
+
+- **Peak Hour Analysis:** Memetakan frekuensi transaksi berdasarkan waktu kejadian. Query ini bertujuan untuk mengidentifikasi jam-jam sibuk (peak hours) di mana kepadatan transaksi meningkat.
 
 
 ## Konklusi
