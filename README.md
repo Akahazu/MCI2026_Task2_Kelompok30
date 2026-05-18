@@ -94,7 +94,7 @@ Dalam pengerjaan ini, total akan ada 1 folder utama yang menaungi keseluruhan fi
 4. __process_orders_spark.py__
    * Membuat tabel orders_top_product beserta isinya pada database analytics.
 5. __process_user_behavior.py__
-   __ Membuat tabel customer_ranking beserta isinya pada database analytics.
+   * Membuat tabel customer_ranking beserta isinya pada database analytics.
 6. __orders_pipeline.py__
    * Membentuk DAG pada airflow dan melakukan fetch dari dataset ke file process untuk dioleh menjadi tabel baru.
 <br>
