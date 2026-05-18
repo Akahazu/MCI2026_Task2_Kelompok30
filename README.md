@@ -151,7 +151,7 @@ __Hasil__: <br>
 <img alt="image" src="https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/images/Metabase%20-%20Orders%20Top%20Products_page-0001.jpg" />
 
 <br>
-__Penjelasan Tabel:__ <br>
+__Penjelasan Tabel__: <br>
 Tabel ini berisikan data per produk yang terkhusus untuk melihat produk dengan penjualan terbanyak. Total kolom pada tabel ini ada 5 yaitu product_name department, total_orders, reorder_count Int32, dan unique_users. Dengan kombinasi ini, diharapkan tabel ini bisa membantu visualisasi yang berfokus pada pengenalan produk.
 <br>
 
@@ -161,7 +161,7 @@ Langkah pengerjaan pada kode sama dengan process_orders_spark.py karena memiliki
 __Hasil__:
 <img alt="image" src="https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/images/Metabase%20-%20Customer%20Ranking_page-0001.jpg" />
 <br>
-__Penjelasan Tabel:__ <br>
+__Penjelasan Tabel__: <br>
 Tabel ini berisikan data setiap user dan perilakunya. Tabel ini memiliki 9 kolom yaitu user_id, basket_size (total produk yang dibeli), reorder_total (total barang yang user reorder dalam order yang terdata), days_since_prior_order, avg_order_hour, basket_score (hasil normalisasi basket_size dengan skala 0-1), reorder_rate (hasil normalisasi reorder_total dengan skala 0-1), recency_score (hasil normalisasi days_since_prior_order dengan skala 0-1), dan final_score yaitu perhitungan nilai yang diberikan pada setiap user dari perilaku membelinya yang didasari dengan model yang mengikuti RFM tapi dengan penyesuaian dengan data yang ada.
 <br>
 
@@ -213,7 +213,7 @@ Data yang telah tersimpan di ClickHouse kemudian divisualisasikan melalui Metaba
 
 - **Peak Hour Analysis:** Memetakan frekuensi transaksi berdasarkan waktu kejadian. Query ini bertujuan untuk mengidentifikasi jam-jam sibuk (peak hours) di mana kepadatan transaksi meningkat.
 <br>
-__Hasil:__
+__Hasil__:
 <img alt="image" src="https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/images/Metabase%20-%20Dashboard%20Orders_page-0001.jpg" />
 
 ## Konklusi
