@@ -116,7 +116,6 @@ Langkah pada pengerjaan kode:
    * Memberi nama pada DAG, mengatur cron, dan konfigurasi lain
 4. __Tasks__
    * Program membuat task untuk DAG yang mana di sini kami membuat 3 task yaitu menjalankan fetch_order.py, process_orders_spark.py, dan process_user_behavior.py. Setelah itu, diberikan pengaturan agar fetch_order.py harus berhasil dijalankan sebelum kedua tasks lainnya.
-<br>
 
 ### fetch_order.py
 Source code: [fetch_order.py](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/dags/scripts/fetch_orders.py) <br>
