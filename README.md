@@ -172,17 +172,23 @@ Data yang telah tersimpan di ClickHouse kemudian divisualisasikan melalui Metaba
 
 - **Customer Segmentation:** Pengelompokan dilakukan dengan mengevaluasi final_score, reorder_rate, dan durasi pesanan terakhir. Kategori yang terbentuk meliputi:
 
-    - **The Champions:** Pelanggan dengan skor > 80 (paling loyal). Bisa diberikan pendekatan berupa perks eksklusif.
+    - **The Champions:** Pelanggan dengan skor > 80 (paling loyal).
+      * Bisa diberikan pendekatan berupa perks eksklusif.
 
-    - **The Potential:** Pelanggan dengan skor cukup tinggi yang memiliki potensi besar untuk menjadi pelanggan paling loyal. Bisa diberikan pendekatan berupa conditional promo.
+    - **The Potential:** Pelanggan dengan skor cukup tinggi yang memiliki potensi besar untuk menjadi pelanggan paling loyal.
+      * Bisa diberikan pendekatan berupa conditional promo.
 
-    - **Regular:** Pelanggan dengan skor biasa-biasa saja. Perlu menjaga kualitas dan memberikan promo konsisten.
+    - **Regular:** Pelanggan dengan skor biasa-biasa saja.
+      * Perlu menjaga kualitas dan memberikan promo konsisten.
     
-    - **At Risk Customer:** Pelanggan dengan skor menengah yang memerlukan perhatian agar tidak berpindah. Perlu diberikan promo besar sekali waktu untuk menarik kembali perhatian.
+    - **At Risk Customer:** Pelanggan dengan skor menengah yang memerlukan perhatian agar tidak berpindah.
+      * Perlu diberikan promo besar sekali waktu untuk menarik kembali perhatian.
 
-    - **New Customer:** Pelanggan baru. Perlu diberikan promosi rutin agar menjaga ketertarikan.
+    - **New Customer:** Pelanggan baru.
+      * Perlu diberikan promosi rutin agar menjaga ketertarikan.
 
-    - **Lost Customer:** Pelanggan dengan performa skor terendah (sudah tidak pernah kembali lagi). Bisa diabaikan dan mengalokasikan fokus ke segmentasi lain.
+    - **Lost Customer:** Pelanggan dengan performa skor terendah (sudah tidak pernah kembali lagi).
+      * Bisa diabaikan dan mengalokasikan fokus ke segmentasi lain.
 
 - **Top 10 Loyal Customer:** Tabel ini mengagregasikan skor loyalitas setiap pengguna. Fungsi utamanya adalah mengidentifikasi individu dengan final score tertinggi.
 
