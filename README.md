@@ -124,6 +124,7 @@ Langkah pengerjaan pada kode:
    * Memastikan bahwa program mengambil dari data yang benar.
 3. __Fetch__
    * Fetch dimulai dengan melakukan request dan mengambil payload dari URL yang mana setelahnya setiap kolom didefinisikan satu per satu isinya agar sesuai antara dataset awal dengan tabel baru nantinya yang akan dianalisis. Lalu dilanjutkan dengan membuat setiap calon kolom tadi ke dalam data frame dan mengubahnya lagi ke parquet pada direktori data_lake/orders/.
+<br>
 __Hasil__:
 <img alt="image" src="https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/images/Airflow%20DAG.png" />
 <br>
