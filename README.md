@@ -124,6 +124,8 @@ Langkah pengerjaan pada kode:
    * Memastikan bahwa program mengambil dari data yang benar.
 3. __Fetch__
    * Fetch dimulai dengan melakukan request dan mengambil payload dari URL yang mana setelahnya setiap kolom didefinisikan satu per satu isinya agar sesuai antara dataset awal dengan tabel baru nantinya yang akan dianalisis. Lalu dilanjutkan dengan membuat setiap calon kolom tadi ke dalam data frame dan mengubahnya lagi ke parquet pada direktori data_lake/orders/.
+__Hasil__:
+<img alt="image" src="https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/images/Airflow%20DAG.png" />
 <br>
 
 ## Kode untuk Database 
@@ -170,17 +172,17 @@ Data yang telah tersimpan di ClickHouse kemudian divisualisasikan melalui Metaba
 
 - **Customer Segmentation:** Pengelompokan dilakukan dengan mengevaluasi final_score, reorder_rate, dan durasi pesanan terakhir. Kategori yang terbentuk meliputi:
 
-    - **The Champions:** Pelanggan dengan skor > 80 (paling loyal).
+    - **The Champions:** Pelanggan dengan skor > 80 (paling loyal). Bisa diberikan pendekatan berupa perks eksklusif.
 
-    - **The Potential:** Pelanggan dengan skor cukup tinggi yang memiliki potensi besar untuk menjadi pelanggan paling loyal.
+    - **The Potential:** Pelanggan dengan skor cukup tinggi yang memiliki potensi besar untuk menjadi pelanggan paling loyal. Bisa diberikan pendekatan berupa conditional promo.
 
-    - **Regular:** Pelanggan dengan skor biasa-biasa saja. 
+    - **Regular:** Pelanggan dengan skor biasa-biasa saja. Perlu menjaga kualitas dan memberikan promo konsisten.
     
-    - **At Risk Customer:** Pelanggan dengan skor menengah yang memerlukan perhatian agar tidak berpindah.
+    - **At Risk Customer:** Pelanggan dengan skor menengah yang memerlukan perhatian agar tidak berpindah. Perlu diberikan promo besar sekali waktu untuk menarik kembali perhatian.
 
-    - **New Customer:** Pelanggan baru
+    - **New Customer:** Pelanggan baru. Perlu diberikan promosi rutin agar menjaga ketertarikan.
 
-    - **Lost Customer:** Pelanggan dengan performa skor terendah (sudah tidak pernah kembali lagi).
+    - **Lost Customer:** Pelanggan dengan performa skor terendah (sudah tidak pernah kembali lagi). Bisa diabaikan dan mengalokasikan fokus ke segmentasi lain.
 
 - **Top 10 Loyal Customer:** Tabel ini mengagregasikan skor loyalitas setiap pengguna. Fungsi utamanya adalah mengidentifikasi individu dengan final score tertinggi.
 
