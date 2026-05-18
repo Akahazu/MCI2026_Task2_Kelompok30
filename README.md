@@ -77,6 +77,7 @@ Folder/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
+├── sql-metabase.sql
 └── .gitignore
 ```
 
