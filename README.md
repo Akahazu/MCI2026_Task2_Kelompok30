@@ -238,7 +238,7 @@ __Penjelasan Hasil:__ <br>
 4. Produk & Departemen Teratas:
 - Top 3 Produk Reordered: Bag of Organic Bananas, Banana, Organic Strawberries.
 - Top 5 Departemen: Produce, Dairy Eggs, Snacks, Beverages, Frozen.
-  * Dari data, produk organik lebih populer dikalangan pelanggan.
+  * Dari data, produk organik dan sehat cukup populer dikalangan pelanggan.
 5. Analisis Waktu & Loyalitas:
 - Peak Transaction Hour: Terkonsentrasi pada pukul 08:00 hingga 16:00 (Aktivitas tertinggi pada jam kerja), dan puncaknya pada jam 10:00.
 - Loyalitas tertinggi: Skor loyalitas pengguna tertinggi mencapai 86.97 poin.
