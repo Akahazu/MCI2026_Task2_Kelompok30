@@ -83,18 +83,19 @@ Folder/
 Dalam pengerjaan ini, total akan ada 1 folder utama yang menaungi keseluruhan file dan folder lain, 5 sub folder (dags, data_lake, scripts, \_\_pycache__, dan orders), 8 file utama (meliputi 4 file .py, 1 Dockerfile, 1 file .yml, 1 .txt, dan 1 .gitignore(kosong pada kasus ini)), serta file dinamis pada folder dags/\_\_pycache__/ yang berisikan cache agar kode python bisa lebih efisien dan data_lake/orders/ yang berisikan raw data dalam bentuk parquet.
 
 <br>
+
 ## Penjelasan Fungsi Umum Setiap Kode
-1. _Dockerfile & docker-compose.yml_
+1. *Dockerfile & docker-compose.yml*
    * Menyiapkan kebutuhan dan menjalankan compose apache spark dan airflow dengan docker
-2. _requirements.txt_
+2. *requirements.txt*
    * Berisikan kebutuhan extension dan versinya
-3. _fetch_order.py_
+3. *fetch_order.py*
    * Mengambil JSON data dari URL dan menjadikannya dalam bentuk dataset dengan data type .parquet
-4. _process_orders_spark.py_
+4. *process_orders_spark.py*
    * Membuat tabel orders_top_product beserta isinya pada database analytics.
-5. _process_user_behavior.py_
+5. *process_user_behavior.py*
    * Membuat tabel customer_ranking beserta isinya pada database analytics.
-6. _orders_pipeline.py_
+6. *orders_pipeline.py*
    * Membentuk DAG pada airflow dan melakukan fetch dari dataset ke file process untuk dioleh menjadi tabel baru.
 <br>
 
