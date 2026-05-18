@@ -141,8 +141,9 @@ Langkah pengerjaan pada kode:
 4. __Koneksi ke Clickhouse dan Pembuatan Tabel__
    * Program mengoneksikan diri dengan ClickHouse yang telah dikonfigurasikan pada docker-compose.yml lalu membuat tabel baru berisikan data data pada data frame yang telah dibuat sebelumnya.
 5. __Auto Update__
-   * Dengan truncate - insert, metabase selalu menampilkan hasil terbaru dari URL dataset.
+   * Dengan truncate - insert, metabase selalu menampilkan hasil terbaru dari URL dataset. <br>
 __Hasil__:
+![top_products](images/Metabase - Orders Top Products_page-001.jpg)
 
 <br>
 __Penjelasan Tabel:__ <br>
