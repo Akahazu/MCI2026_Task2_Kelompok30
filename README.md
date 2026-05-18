@@ -149,15 +149,25 @@ Langkah pengerjaan pada kode:
 __Hasil__:
 
 <br>
+__Penjelasan Tabel:__ <br>
+Tabel ini berisikan data per produk yang terkhusus untuk melihat produk dengan penjualan terbanyak. Total kolom pada tabel ini ada 5 yaitu product_name department, total_orders, reorder_count Int32, dan unique_users. Dengan kombinasi ini, diharapkan tabel ini bisa membantu visualisasi yang berfokus pada pengenalan produk.
+<br>
 
 ### __process_user_behavior.py__
 Source Code: [process_user_behavior.py](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/dags/scripts/process_user_behavior.py) <br>
 Langkah pengerjaan pada kode sama dengan process_orders_spark.py karena memiliki fungsi yang sama yaitu membuat tabel, namun __process_user_behavior.py__ mengimport os dan glob untuk melakukan parquet clenaing di akhir setelah auto update.
 __Hasil__:
+
+<br>
+__Penjelasan Tabel:__ <br>
+Tabel ini berisikan data setiap user dan perilakunya. Tabel ini memiliki 9 kolom yaitu user_id, basket_size (total produk yang dibeli), reorder_total (total barang yang user reorder dalam order yang terdata), days_since_prior_order, avg_order_hour, basket_score (hasil normalisasi basket_size dengan skala 0-1), reorder_rate (hasil normalisasi reorder_total dengan skala 0-1), recency_score (hasil normalisasi days_since_prior_order dengan skala 0-1), dan final_score yaitu perhitungan nilai yang diberikan pada setiap user dari perilaku membelinya yang didasari dengan model yang mengikuti RFM tapi dengan penyesuaian dengan data yang ada.
 <br>
 
 ### sql-metabase.sql
 Source Code: [sql-metabase.sql](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/sql-metabase.sql) <br>
 
 
-
+## Konklusi
+Dataset yang diberikan dapat digunakan untuk pengolahan data yang beragam seperti mencari top product maupun clustering customer. Untuk kelebihan dari dataset ini, data mudah dibaca karena memiliki format yang jelas sehingga tidak ada kendala parsing. Selain itu dataset ini juga memiliki informasi yang cukup lengkap seperti departemen dari setiap produk dan apakah produk tersebut sudah pernah diorder oleh user yang sedang membelinya sekarang atau belum. Untuk kekurangannya sendiri terletak di bagian informasi krusial atau umum yang malah tidak tercantum seperi harga produk dan kuantitas produk yang dibeli per order sehingga visualisasi data harus melewati step tambahan untuk penyesuaian.
+<br>
+Dengan bantuan dari spark, docker, clickhouse, apache airflow, dan metabase, pengolahan data seperti ini dapat dilakukan dengan lebih mudah dengan fitur yang cukup beragam di setiap stepnya. Kelebihan dari semua tools yang kami sebutkan tadi adalah keberagaman dari cara penggunaan yang masih bisa dieksplor lebih jauh dari apa yang sudah digunakan sehingga memungkinkan penggunaan yang lebih versatile. Kekurangan dari semua tools yang kami sebutkan tadi adalah session yang selalu restart setiap dijalankan ulang sehingga tidak bisa menyimpan progress dan juga docker yang cukup berat sehingga terkadang membuat device overload.
