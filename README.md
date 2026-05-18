@@ -147,6 +147,7 @@ __Hasil__:
 <br>
 __Penjelasan Tabel:__ <br>
 Tabel ini berisikan data per produk yang terkhusus untuk melihat produk dengan penjualan terbanyak. Total kolom pada tabel ini ada 5 yaitu product_name department, total_orders, reorder_count Int32, dan unique_users. Dengan kombinasi ini, diharapkan tabel ini bisa membantu visualisasi yang berfokus pada pengenalan produk.
+<br>
 
 ### __process_user_behavior.py__
 Source Code: [process_user_behavior.py](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/dags/scripts/process_user_behavior.py) <br>
