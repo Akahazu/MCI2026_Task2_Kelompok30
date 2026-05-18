@@ -45,6 +45,7 @@ JSON Response
               └── ...
 ```
 <img width="858" height="884" alt="image" src="https://github.com/user-attachments/assets/14f645d7-2b4d-4039-ac5b-99bde3b58d9e" />
+<br>
 
 ## Pengenalan Struktur Folder dan File
 ```
@@ -81,20 +82,21 @@ Folder/
 
 Dalam pengerjaan ini, total akan ada 1 folder utama yang menaungi keseluruhan file dan folder lain, 5 sub folder (dags, data_lake, scripts, \_\_pycache__, dan orders), 8 file utama (meliputi 4 file .py, 1 Dockerfile, 1 file .yml, 1 .txt, dan 1 .gitignore(kosong pada kasus ini)), serta file dinamis pada folder dags/\_\_pycache__/ yang berisikan cache agar kode python bisa lebih efisien dan data_lake/orders/ yang berisikan raw data dalam bentuk parquet.
 
-
+<br>
 ## Penjelasan Fungsi Umum Setiap Kode
-1. Dockerfile & docker-compose.yml
+1. _Dockerfile & docker-compose.yml_
    * Menyiapkan kebutuhan dan menjalankan compose apache spark dan airflow dengan docker
-2. requirements.txt
+2. _requirements.txt_
    * Berisikan kebutuhan extension dan versinya
-3. fetch_order.py
+3. _fetch_order.py_
    * Mengambil JSON data dari URL dan menjadikannya dalam bentuk dataset dengan data type .parquet
-4. process_orders_spark.py
+4. _process_orders_spark.py_
    * Membuat tabel orders_top_product beserta isinya pada database analytics.
-5. process_user_behavior.py
+5. _process_user_behavior.py_
    * Membuat tabel customer_ranking beserta isinya pada database analytics.
-6. orders_pipeline.py
+6. _orders_pipeline.py_
    * Membentuk DAG pada airflow dan melakukan fetch dari dataset ke file process untuk dioleh menjadi tabel baru.
+<br>
 
 ## Kode untuk DAG Apache Airflow
 [fetch_order.py](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/dags/scripts/fetch_orders.py)
