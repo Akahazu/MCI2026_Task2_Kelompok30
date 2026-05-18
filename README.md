@@ -209,7 +209,7 @@ Data yang telah tersimpan di ClickHouse kemudian divisualisasikan melalui Metaba
 
 #### C. Analisis Tambahan
 
-- **KPI Scorecards:** Menyajikan angka kumulatif yang bersifat esensial, seperti **Total Orders**, **Total Products Type**, hingga **Average User per Product**. 
+- **KPI Scorecards:** Menyajikan angka kumulatif yang bersifat esensial, seperti **Total Orders**, **Total Products Type**, hingga **Average User per Product**.
 
 - **Peak Hour Analysis:** Memetakan frekuensi transaksi berdasarkan waktu kejadian. Query ini bertujuan untuk mengidentifikasi jam-jam sibuk (peak hours) di mana kepadatan transaksi meningkat.
 <br>
