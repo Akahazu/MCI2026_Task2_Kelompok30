@@ -125,7 +125,7 @@ Langkah pengerjaan pada kode:
 3. __Fetch__
    * Fetch dimulai dengan melakukan request dan mengambil payload dari URL yang mana setelahnya setiap kolom didefinisikan satu per satu isinya agar sesuai antara dataset awal dengan tabel baru nantinya yang akan dianalisis. Lalu dilanjutkan dengan membuat setiap calon kolom tadi ke dalam data frame dan mengubahnya lagi ke parquet pada direktori data_lake/orders/.
 <br>
-__Hasil__:
+Hasil:
 <img alt="image" src="https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/images/Airflow%20DAG.png" />
 <br>
 
@@ -151,13 +151,14 @@ __Hasil__: <br>
 <img alt="image" src="https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/images/Metabase%20-%20Orders%20Top%20Products_page-0001.jpg" />
 
 <br>
+
 __Penjelasan Tabel__: <br>
 Tabel ini berisikan data per produk yang terkhusus untuk melihat produk dengan penjualan terbanyak. Total kolom pada tabel ini ada 5 yaitu product_name department, total_orders, reorder_count Int32, dan unique_users. Dengan kombinasi ini, diharapkan tabel ini bisa membantu visualisasi yang berfokus pada pengenalan produk.
 <br>
 
 ### __process_user_behavior.py__
 Source Code: [process_user_behavior.py](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/dags/scripts/process_user_behavior.py) <br>
-Langkah pengerjaan pada kode sama dengan process_orders_spark.py karena memiliki fungsi yang sama yaitu membuat tabel, namun __process_user_behavior.py__ mengimport os dan glob untuk melakukan parquet clenaing di akhir setelah auto update. <br>
+Langkah pengerjaan pada kode sama dengan process_orders_spark.py karena memiliki fungsi yang sama yaitu membuat tabel, namun __process_user_behavior.py__ mengimport os dan glob untuk melakukan parquet clenaing di akhir setelah auto update. <br> <br>
 __Hasil__:
 <img alt="image" src="https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/images/Metabase%20-%20Customer%20Ranking_page-0001.jpg" />
 <br>
@@ -212,7 +213,8 @@ Data yang telah tersimpan di ClickHouse kemudian divisualisasikan melalui Metaba
 - **KPI Scorecards:** Menyajikan angka kumulatif yang bersifat esensial, seperti **Total Orders**, **Total Products Type**, hingga **Average User per Product**.
 
 - **Peak Hour Analysis:** Memetakan frekuensi transaksi berdasarkan waktu kejadian. Query ini bertujuan untuk mengidentifikasi jam-jam sibuk (peak hours) di mana kepadatan transaksi meningkat.
-<br>
+<br> <br>
+
 __Hasil__:
 <img alt="image" src="https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/images/Metabase%20-%20Dashboard%20Orders_page-0001.jpg" />
 
@@ -245,5 +247,5 @@ __Penjelasan Hasil:__ <br>
 
 ## Konklusi
 Dataset yang diberikan dapat digunakan untuk pengolahan data yang beragam seperti mencari top product maupun clustering customer. Untuk kelebihan dari dataset ini, data mudah dibaca karena memiliki format yang jelas sehingga tidak ada kendala parsing. Selain itu dataset ini juga memiliki informasi yang cukup lengkap seperti departemen dari setiap produk dan apakah produk tersebut sudah pernah diorder oleh user yang sedang membelinya sekarang atau belum. Untuk kekurangannya sendiri terletak di bagian informasi krusial atau umum yang malah tidak tercantum seperi harga produk dan kuantitas produk yang dibeli per order sehingga visualisasi data harus melewati step tambahan untuk penyesuaian. Selain itu jumlah data pada dataset terbatas hanya 100 jadi sulit memastikan retention rate yang sebenarnya dan tidak bisa melihat history per user sebelumnya.
-<br>
+<br><br>
 Dengan bantuan dari spark, docker, clickhouse, apache airflow, dan metabase, pengolahan data seperti ini dapat dilakukan dengan lebih mudah dengan fitur yang cukup beragam di setiap stepnya. Kelebihan dari semua tools yang kami sebutkan tadi adalah keberagaman dari cara penggunaan yang masih bisa dieksplor lebih jauh dari apa yang sudah digunakan sehingga memungkinkan penggunaan yang lebih versatile. Kekurangan dari semua tools yang kami sebutkan tadi adalah session yang selalu restart setiap dijalankan ulang sehingga tidak bisa menyimpan progress dan juga docker yang cukup berat sehingga terkadang membuat device overload.
