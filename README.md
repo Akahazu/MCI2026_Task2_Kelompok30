@@ -84,6 +84,7 @@ Folder/
 Dalam pengerjaan ini, total akan ada 1 folder utama yang menaungi keseluruhan file dan folder lain, 5 sub folder (dags, data_lake, scripts, \_\_pycache__, dan orders), 9 file utama (meliputi 4 file .py, 1 Dockerfile, 1 file .yml, 1 file .txt, 1 file .sql dan 1 .gitignore(kosong pada kasus ini)), serta file dinamis pada folder dags/\_\_pycache__/ yang berisikan cache agar kode python bisa lebih efisien dan data_lake/orders/ yang berisikan raw data dalam bentuk parquet.
 
 <br>
+<br>
 
 ## Penjelasan Fungsi Umum Setiap Kode
 1. __Dockerfile & docker-compose.yml__
@@ -98,6 +99,7 @@ Dalam pengerjaan ini, total akan ada 1 folder utama yang menaungi keseluruhan fi
    * Membuat tabel customer_ranking beserta isinya pada database analytics.
 6. __orders_pipeline.py__
    * Membentuk DAG pada airflow dan melakukan fetch dari dataset ke file process untuk dioleh menjadi tabel baru.
+<br>
 <br>
 
 ## Kode untuk DAG Apache Airflow
@@ -114,6 +116,7 @@ Langkah pada pengerjaan kode:
    * Memberi nama pada DAG, mengatur cron, dan konfigurasi lain
 4. __Tasks__
    * Program membuat task untuk DAG yang mana di sini kami membuat 3 task yaitu menjalankan fetch_order.py, process_orders_spark.py, dan process_user_behavior.py. Setelah itu, diberikan pengaturan agar fetch_order.py harus berhasil dijalankan sebelum kedua tasks lainnya.
+<br>
 
 ### fetch_order.py
 Source code: [fetch_order.py](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/dags/scripts/fetch_orders.py) <br>
@@ -124,6 +127,8 @@ Langkah pengerjaan pada kode:
    * Memastikan bahwa program mengambil dari data yang benar.
 3. __Fetch__
    * Fetch dimulai dengan melakukan request dan mengambil payload dari URL yang mana setelahnya setiap kolom didefinisikan satu per satu isinya agar sesuai antara dataset awal dengan tabel baru nantinya yang akan dianalisis. Lalu dilanjutkan dengan membuat setiap calon kolom tadi ke dalam data frame dan mengubahnya lagi ke parquet pada direktori data_lake/orders/.
+<br>
+<br>
 
 ## Kode untuk Database 
 Proses ini meliputi 2 tahap yaitu DDL untuk membuat tabel baru dari dataset dan query untuk membuat visualisasi pada metabase. Untuk DDL, pada proses ini diwakili oleh __process_orders_spark.py__ untuk tabel orders_top_products dan __process_user_behavior.py__ untuk tabel customer_ranking. Sedangkan untuk query yang kami gunakan tersimpan dalam sql-metabase.sql.
@@ -141,10 +146,18 @@ Langkah pengerjaan pada kode:
    * Program mengoneksikan diri dengan ClickHouse yang telah dikonfigurasikan pada docker-compose.yml lalu membuat tabel baru berisikan data data pada data frame yang telah dibuat sebelumnya.
 5. __Auto Update__
    * Dengan truncate - insert, metabase selalu menampilkan hasil terbaru dari URL dataset.
+__Hasil__:
+
+<br>
 
 ### __process_user_behavior.py__
 Source Code: [process_user_behavior.py](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/dags/scripts/process_user_behavior.py) <br>
 Langkah pengerjaan pada kode sama dengan process_orders_spark.py karena memiliki fungsi yang sama yaitu membuat tabel, namun __process_user_behavior.py__ mengimport os dan glob untuk melakukan parquet clenaing di akhir setelah auto update.
+__Hasil__:
+<br>
 
 ### sql-metabase.sql
+Source Code: [sql-metabase.sql](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/sql-metabase.sql) <br>
+
+
 
