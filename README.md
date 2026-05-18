@@ -216,6 +216,33 @@ Data yang telah tersimpan di ClickHouse kemudian divisualisasikan melalui Metaba
 __Hasil__:
 <img alt="image" src="https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/images/Metabase%20-%20Dashboard%20Orders_page-0001.jpg" />
 
+__Penjelasan Hasil:__ <br>
+1. KPI Scorecards:
+- Total Pesanan: 992 order
+- Variasi Produk: 801 tipe produk
+- Total Reorder Global: 621 kali
+- Rata-rata Pesanan per Produk: 1.24
+2. Segmentasi Pelanggan (Basis 100 User Sample):
+- The Potential: 41%
+- Regular Customer: 31%
+- At Risk Customer: 11%
+- New Customer: 10%
+- Lost Customer: 4%
+- The Champions: 3% <br>
+  * Mayoritas pelanggan masuk ke tipe segmentasi potential, berarti sudah loyal.
+3. Profil Gaya Belanja:
+- Balanced: 79% 
+- Frequent Reorderer: 17%
+- Stockpiler: 4%
+  * Mayoritas pelanggan memiliki tipe belanja yang balanced yang polanya stabil.
+4. Produk & Departemen Teratas:
+- Top 3 Produk Reordered: Bag of Organic Bananas, Banana, Organic Strawberries.
+- Top 5 Departemen: Produce, Dairy Eggs, Snacks, Beverages, Frozen.
+  * Dari data, produk organik lebih populer dikalangan pelanggan.
+5. Analisis Waktu & Loyalitas:
+- Peak Transaction Hour: Terkonsentrasi pada pukul 08:00 hingga 16:00 (Aktivitas tertinggi pada jam kerja), dan puncaknya pada jam 10:00.
+- Loyalitas tertinggi: Skor loyalitas pengguna tertinggi mencapai 86.97 poin.
+
 ## Konklusi
 Dataset yang diberikan dapat digunakan untuk pengolahan data yang beragam seperti mencari top product maupun clustering customer. Untuk kelebihan dari dataset ini, data mudah dibaca karena memiliki format yang jelas sehingga tidak ada kendala parsing. Selain itu dataset ini juga memiliki informasi yang cukup lengkap seperti departemen dari setiap produk dan apakah produk tersebut sudah pernah diorder oleh user yang sedang membelinya sekarang atau belum. Untuk kekurangannya sendiri terletak di bagian informasi krusial atau umum yang malah tidak tercantum seperi harga produk dan kuantitas produk yang dibeli per order sehingga visualisasi data harus melewati step tambahan untuk penyesuaian. Selain itu jumlah data pada dataset terbatas hanya 100 jadi sulit memastikan retention rate yang sebenarnya dan tidak bisa melihat history per user sebelumnya.
 <br>
