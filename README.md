@@ -103,7 +103,7 @@ Dalam pengerjaan ini, total akan ada 1 folder utama yang menaungi keseluruhan fi
 Proses ini berpusat pada fetch_order.py dan orders_pipeline.py.
 
 ### fetch_order.py
-Source code: [fetch_order.py](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/dags/scripts/fetch_orders.py)
+Source code: [fetch_order.py](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/dags/scripts/fetch_orders.py) <br>
 Langkah pengerjaan pada kode:
 1. __Import library__
    * Library yang digunakan yaitu request, pandas,os, dan datetime.
@@ -113,7 +113,7 @@ Langkah pengerjaan pada kode:
    * Fetch dimulai dengan melakukan request dan mengambil payload dari URL yang mana setelahnya setiap kolom didefinisikan satu per satu isinya agar sesuai antara dataset awal dengan tabel baru nantinya yang akan dianalisis. Lalu dilanjutkan dengan membuat setiap calon kolom tadi ke dalam data frame dan mengubahnya lagi ke parquet pada direktori data_lake/orders/.
 
 ### orders_pipeline.py
-Source code: [orders_pipeline.py](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/dags/orders_pipeline.py)
+Source code: [orders_pipeline.py](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/dags/orders_pipeline.py) <br>
 Langkah pada pengerjaan kode:
 1. __Import library__
    * Library yang digunakan yaitu Airflow dan datetime.
