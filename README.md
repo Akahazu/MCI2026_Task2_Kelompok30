@@ -203,7 +203,9 @@ Data yang telah tersimpan di ClickHouse kemudian divisualisasikan melalui Metaba
 - **KPI Scorecards:** Menyajikan angka kumulatif yang bersifat esensial, seperti **Total Orders**, **Total Products Type**, hingga **Average User per Product**. 
 
 - **Peak Hour Analysis:** Memetakan frekuensi transaksi berdasarkan waktu kejadian. Query ini bertujuan untuk mengidentifikasi jam-jam sibuk (peak hours) di mana kepadatan transaksi meningkat.
-
+<br>
+__Hasil:__
+<img alt="image" src="https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/images/Metabase%20-%20Dashboard%20Orders_page-0001.jpg" />
 
 ## Konklusi
 Dataset yang diberikan dapat digunakan untuk pengolahan data yang beragam seperti mencari top product maupun clustering customer. Untuk kelebihan dari dataset ini, data mudah dibaca karena memiliki format yang jelas sehingga tidak ada kendala parsing. Selain itu dataset ini juga memiliki informasi yang cukup lengkap seperti departemen dari setiap produk dan apakah produk tersebut sudah pernah diorder oleh user yang sedang membelinya sekarang atau belum. Untuk kekurangannya sendiri terletak di bagian informasi krusial atau umum yang malah tidak tercantum seperi harga produk dan kuantitas produk yang dibeli per order sehingga visualisasi data harus melewati step tambahan untuk penyesuaian.
