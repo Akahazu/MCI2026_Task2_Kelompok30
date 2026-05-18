@@ -6,7 +6,7 @@
 | Severinus Fabian Tanuwidjaja            | 5025241110        |
 
 
-##Pengenalan Dataset
+## Pengenalan Dataset
 Data diambil dari http://96.9.212.102:8000/orders yang berisikan file JSON yang berisikan rincian belanja dari 100 data pemesanan terakhir dengan struktur sebagai berikut:
 ```
 JSON Response
@@ -46,7 +46,7 @@ JSON Response
 ```
 <img width="858" height="884" alt="image" src="https://github.com/user-attachments/assets/14f645d7-2b4d-4039-ac5b-99bde3b58d9e" />
 
-##Pengenalan Struktur Folder dan File
+## Pengenalan Struktur Folder dan File
 ```
 Folder/
 │
