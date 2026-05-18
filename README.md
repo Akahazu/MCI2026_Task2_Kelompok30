@@ -156,7 +156,7 @@ Tabel ini berisikan data per produk yang terkhusus untuk melihat produk dengan p
 Source Code: [process_user_behavior.py](https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/dags/scripts/process_user_behavior.py) <br>
 Langkah pengerjaan pada kode sama dengan process_orders_spark.py karena memiliki fungsi yang sama yaitu membuat tabel, namun __process_user_behavior.py__ mengimport os dan glob untuk melakukan parquet clenaing di akhir setelah auto update. <br>
 __Hasil__:
-
+<img alt="image" src="https://github.com/Akahazu/MCI2026_Task2_Kelompok30/blob/main/images/Metabase%20-%20Customer%20Ranking_page-0001.jpg" />
 <br>
 __Penjelasan Tabel:__ <br>
 Tabel ini berisikan data setiap user dan perilakunya. Tabel ini memiliki 9 kolom yaitu user_id, basket_size (total produk yang dibeli), reorder_total (total barang yang user reorder dalam order yang terdata), days_since_prior_order, avg_order_hour, basket_score (hasil normalisasi basket_size dengan skala 0-1), reorder_rate (hasil normalisasi reorder_total dengan skala 0-1), recency_score (hasil normalisasi days_since_prior_order dengan skala 0-1), dan final_score yaitu perhitungan nilai yang diberikan pada setiap user dari perilaku membelinya yang didasari dengan model yang mengikuti RFM tapi dengan penyesuaian dengan data yang ada.
